@@ -1,16 +1,56 @@
-# React + Vite
+# Restoring Paths
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite website for Restoring Paths.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Install dependencies: `npm install`
+- Start dev server: `npm run dev`
+- Build production files: `npm run build`
 
-## React Compiler
+## GitHub Pages deployment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This repository is configured to deploy automatically to GitHub Pages from the `main` branch using GitHub Actions.
 
-## Expanding the ESLint configuration
+Relevant files:
+- [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml)
+- [scripts/prepare-github-pages.mjs](scripts/prepare-github-pages.mjs)
+- [package.json](package.json)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### One-time GitHub setup
+
+1. Open the repository on GitHub.
+2. Go to `Settings -> Pages`.
+3. Under Source, choose `GitHub Actions`.
+4. Set the custom domain to `restoringpaths.com`.
+5. Enable HTTPS after DNS finishes propagating.
+
+## GoDaddy DNS records for restoringpaths.com
+
+In GoDaddy DNS, remove the old parked A records for `@` and use these GitHub Pages records instead.
+
+### A records for root domain
+
+Host: `@`
+
+- `185.199.108.153`
+- `185.199.109.153`
+- `185.199.110.153`
+- `185.199.111.153`
+
+### CNAME for www
+
+- Host: `www`
+- Value: `anthonyc4848.github.io`
+
+### Remove old records
+
+Delete old `@` A records if they still exist:
+
+- `13.248.243.5`
+- `76.223.105.230`
+
+## Notes
+
+- The project uses client-side routing, so the Pages build creates `404.html` for SPA fallback support.
+- The custom domain file `CNAME` is generated automatically during the Pages build.
