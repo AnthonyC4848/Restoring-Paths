@@ -43,7 +43,7 @@
 
 .site-header {
   width: 100%;
-  background: #708b6e; /* updated custom header color */
+  background: #5f785b;
   color: #fff;
 }
 .header-inner {
@@ -114,7 +114,7 @@
     opacity: 1;
     transform: translateY(0);
     height: auto;
-    background: linear-gradient(180deg, rgba(112,139,110,0.98), rgba(112,139,110,0.98));
+    background: linear-gradient(180deg, rgba(95,120,91,0.98), rgba(95,120,91,0.98));
     padding: 0.75rem 0.75rem 1rem;
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     z-index: 1003;
@@ -240,12 +240,10 @@ section > div{
 .global-bg {
   position: fixed;
   inset: 0;
-  background-image: url('https://source.unsplash.com/2000x1200/?parent,child&sig=50');
-  background-position: center;
-  background-size: cover;
-  filter: blur(3px) brightness(0.98);
-  transform: scale(1.02);
+  background: #dcebd7;
   z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 /* Hero / carousel */
@@ -312,4 +310,64 @@ section > div{
 
 /* ensure header remains above the bg */
 .site-header{z-index:1001}
+
+.heart-balloon{
+  position: absolute;
+  bottom: -40px;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  animation: floatHeart 11s linear infinite;
+  user-select: none;
+}
+
+.heart-balloon.hb1{ left: 8%; animation-delay: 0s; }
+.heart-balloon.hb2{ left: 24%; animation-delay: 2s; font-size: 1.5rem; }
+.heart-balloon.hb3{ left: 41%; animation-delay: 4s; }
+.heart-balloon.hb4{ left: 59%; animation-delay: 1s; font-size: 1.6rem; }
+.heart-balloon.hb5{ left: 76%; animation-delay: 5s; }
+.heart-balloon.hb6{ left: 90%; animation-delay: 3s; font-size: 1.4rem; }
+
+@keyframes floatHeart {
+  0% { transform: translateY(0) translateX(0) scale(0.92); opacity: 0; }
+  10% { opacity: 0.85; }
+  50% { transform: translateY(-45vh) translateX(10px) scale(1); opacity: 0.65; }
+  100% { transform: translateY(-105vh) translateX(-8px) scale(1.08); opacity: 0; }
+}
+
+.home-heart-balloons{
+  position: relative;
+  height: 70px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.home-heart{
+  position: absolute;
+  bottom: -10px;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  animation: homeFloatHeart 7s ease-in-out infinite;
+  user-select: none;
+}
+
+.home-heart.home-hb1{ left: 8%; animation-delay: 0s; }
+.home-heart.home-hb2{ left: 30%; animation-delay: 1.2s; font-size: 1.4rem; }
+.home-heart.home-hb3{ left: 56%; animation-delay: 2.1s; }
+.home-heart.home-hb4{ left: 78%; animation-delay: 0.6s; font-size: 1.5rem; }
+
+@keyframes homeFloatHeart {
+  0% { transform: translateY(16px) scale(0.92); opacity: 0; }
+  15% { opacity: 0.75; }
+  60% { opacity: 0.65; }
+  100% { transform: translateY(-72px) scale(1.05); opacity: 0; }
+}
+
+.content-panel{
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1.2rem 1.25rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
 
