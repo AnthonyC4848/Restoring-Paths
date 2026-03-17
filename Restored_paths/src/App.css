@@ -1,0 +1,315 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.site-header {
+  width: 100%;
+  background: #708b6e; /* updated custom header color */
+  color: #fff;
+}
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+}
+.brand {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.25rem 0.5rem;
+}
+.brand:hover {
+  opacity: 0.95;
+}
+
+.header-logo {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0.6rem;
+}
+.brand-text {
+  vertical-align: middle;
+}
+
+.site-name{
+  color: #fff;
+  font-weight: 700;
+  margin-left: 0.35rem;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+@media (max-width: 680px){
+  .site-name{display:block}
+  .header-inner{padding-left:72px}
+  .header-logo{height:34px}
+}
+
+/* Mobile header/menu behavior */
+.menu-toggle{
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+}
+
+@media (max-width: 680px){
+  .brand-left{position: absolute; left: 8px; top: 0; padding-left: 8px; height: 100%; display: flex; align-items: center}
+  .header-inner{padding-left: 12px; justify-content: flex-end}
+  .menu-toggle{display: block}
+  /* hide the horizontal nav on mobile unless explicitly opened by the burger */
+  .topnav{display: none}
+  /* prepare the mobile nav for smooth open/close transitions */
+  .topnav{display: flex; flex-direction: column; gap: 0.25rem; position: absolute; top: 100%; left: 0; right: 0; padding: 0 0.75rem; box-sizing: border-box; visibility: hidden; opacity: 0; transform: translateY(-6px); transition: opacity 220ms ease, transform 260ms ease, visibility 260ms; height: 0; overflow: hidden}
+  .topnav:not(.open){display: flex !important}
+  .topnav.open{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+    background: linear-gradient(180deg, rgba(112,139,110,0.98), rgba(112,139,110,0.98));
+    padding: 0.75rem 0.75rem 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 1003;
+  }
+  .topnav.open .navlink{
+    padding: 0.6rem 0.9rem;
+    border-radius: 6px;
+    text-align: left;
+  }
+  /* place the phone CTA to the right on mobile; dropdown will overlay it */
+  .header-right{right:8px; left:auto; padding-right:8px; padding-left:0; z-index:900}
+  /* center the site title */
+  .site-name{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    pointer-events: none;
+  }
+  .contact-cta{padding:0.4rem 0.6rem; font-size:0.95rem}
+  main{padding-top:4.25rem}
+}
+
+/* Smaller screens tidy-up */
+@media (max-width:420px){
+  .menu-toggle{font-size:1.25rem}
+  .site-header .brand .site-name{display:block}
+}
+
+/* place the logo flush to the left edge of the viewport */
+.brand-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  pointer-events: auto;
+}
+
+/* give the centered header inner extra left padding so nav doesn't overlap the logo */
+.header-inner {
+  padding-left: 96px; /* space for logo */
+}
+/* right side contact area */
+.header-right{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+}
+.contact-cta{
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.contact-cta:hover{
+  background: rgba(255,255,255,0.06);
+}
+
+/* slightly larger, more professional nav font */
+.topnav .navlink{
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+}
+.topnav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+.navlink {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+}
+.navlink:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* header-specific overrides for contrast on dark green */
+.site-header .brand,
+.site-header .navlink{
+  color: #fff;
+}
+.site-header .navlink:hover{
+  background: rgba(255,255,255,0.08);
+}
+
+/* Make header fixed at top and prevent content overlap */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+main {
+  padding: 5rem 2rem 1rem;
+  text-align: left;
+}
+
+/* content container max width */
+section > div{
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+/* full-page blurred background behind everything */
+.global-bg {
+  position: fixed;
+  inset: 0;
+  background-image: url('https://source.unsplash.com/2000x1200/?parent,child&sig=50');
+  background-position: center;
+  background-size: cover;
+  filter: blur(3px) brightness(0.98);
+  transform: scale(1.02);
+  z-index: -2;
+}
+
+/* Hero / carousel */
+.hero {
+  position: relative;
+  /* keep a consistent cinematic aspect while staying responsive */
+  aspect-ratio: 16/9;
+  height: clamp(320px, 45vh, 720px);
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+.hero .slide{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 600ms ease, transform 800ms ease;
+}
+.hero .slide.active{
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* ensure images render crisply and remove gaps */
+.hero .slide {
+  image-rendering: auto;
+}
+
+@media (max-width: 600px){
+  .hero { height: clamp(220px, 35vh, 420px); }
+  .hero .slide { object-position: center top; }
+}
+
+/* carousel controls (arrows) */
+.carousel-controls{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  pointer-events: none;
+}
+.carousel-arrow{
+  pointer-events: auto;
+  background: rgba(255,255,255,0.95);
+  color: #333;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+.carousel-arrow:hover{ transform: translateY(-2px); }
+.carousel-arrow:focus{ outline: 3px solid rgba(0,0,0,0.12); }
+
+/* ensure header remains above the bg */
+.site-header{z-index:1001}
+
