@@ -81,6 +81,9 @@
   font-weight: 700;
   font-size: 1.05rem;
   padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
 }
 .brand:hover {
   opacity: 0.95;
@@ -184,6 +187,7 @@
   align-items: center;
   padding-left: 12px;
   pointer-events: auto;
+  z-index: 1001;
 }
 
 /* give the centered header inner extra left padding so nav doesn't overlap the logo */

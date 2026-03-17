@@ -1,4 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
+import slide1 from '../assets/slide1.jpg'
+import slide2 from '../assets/slide2.jpg'
+import slide3 from '../assets/slide3.jpg'
+import slide4 from '../assets/slide4.jpg'
 
 export default function Carousel({ images, interval = 4500 }){
   const unsplashFallback = [
@@ -7,35 +11,22 @@ export default function Carousel({ images, interval = 4500 }){
     'https://source.unsplash.com/1600x900/?mother,child&sig=3'
   ]
 
-  const localCandidates = [
-    '/src/assets/slide1.jpg',
-    '/src/assets/slide2.jpg',
-    '/src/assets/slide3.jpg',
-    '/src/assets/slide4.jpg'
-  ]
+  const localCandidates = useMemo(() => [slide1, slide2, slide3, slide4], [])
 
   const [index, setIndex] = useState(0)
-  const [imagesList, setImagesList] = useState(images || [])
+  const [imagesList, setImagesList] = useState(images || localCandidates)
 
-  // try to detect local images; fall back to provided images or unsplash
   useEffect(()=>{
-    let mounted = true
-    const checks = localCandidates.map(async (url)=>{
-      try{
-        const res = await fetch(url, { method: 'HEAD' })
-        if(res.ok) return url
-      }catch(e){ }
-      return null
-    })
-    Promise.all(checks).then(results=>{
-      if(!mounted) return
-      const found = results.filter(Boolean)
-      if(images && images.length) setImagesList(images)
-      else if(found.length) setImagesList(found)
-      else setImagesList(unsplashFallback)
-    })
-    return ()=>{ mounted = false }
-  },[images])
+    if(images && images.length) setImagesList(images)
+    else if(localCandidates.length) setImagesList(localCandidates)
+    else setImagesList(unsplashFallback)
+  },[images, localCandidates])
+
+  useEffect(()=>{
+    if(index >= imagesList.length && imagesList.length > 0) {
+      setIndex(0)
+    }
+  },[imagesList, index])
 
   useEffect(()=>{
     if(!imagesList || imagesList.length===0) return
