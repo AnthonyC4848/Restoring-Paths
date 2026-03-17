@@ -1,8 +1,29 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 2rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 2rem 0.5rem;
+  }
+}
+
+.app {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -102,7 +123,8 @@
 
 @media (max-width: 680px){
   .brand-left{position: absolute; left: 8px; top: 0; padding-left: 8px; height: 100%; display: flex; align-items: center}
-  .header-inner{padding-left: 12px; justify-content: flex-end}
+  .brand{display: flex; align-items: center}
+  .header-inner{padding-left: 12px; justify-content: flex-end; position: relative}
   .menu-toggle{display: block}
   /* hide the horizontal nav on mobile unless explicitly opened by the burger */
   .topnav{display: none}
@@ -128,13 +150,18 @@
   .header-right{right:8px; left:auto; padding-right:8px; padding-left:0; z-index:900}
   /* center the site title */
   .site-name{
-    display: block;
-    position: absolute;
+    display: flex;
+    position: fixed;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    transform: translateX(-50%);
     margin: 0;
     pointer-events: none;
+    z-index: 999;
+    padding: 0 60px;
+    white-space: nowrap;
+    height: 60px;
+    align-items: center;
   }
   .contact-cta{padding:0.4rem 0.6rem; font-size:0.95rem}
   main{padding-top:4.25rem}
@@ -144,6 +171,7 @@
 @media (max-width:420px){
   .menu-toggle{font-size:1.25rem}
   .site-header .brand .site-name{display:block}
+  .site-name{padding: 0 45px; font-size: 0.9rem}
 }
 
 /* place the logo flush to the left edge of the viewport */
@@ -228,12 +256,35 @@
 main {
   padding: 5rem 2rem 1rem;
   text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 5rem 1rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 5rem 0.5rem 1rem;
+  }
 }
 
 /* content container max width */
 section > div{
   box-sizing: border-box;
   padding: 0 1rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  section > div {
+    padding: 0 0.5rem;
+  }
 }
 
 /* full-page blurred background behind everything */

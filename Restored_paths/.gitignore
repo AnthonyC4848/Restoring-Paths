@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+restoring-paths-godaddy.zip
 
 # Editor directories and files
 .vscode/*
