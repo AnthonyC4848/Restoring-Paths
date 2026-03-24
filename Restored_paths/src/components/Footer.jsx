@@ -1,11 +1,26 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function Footer(){
+const pageLinks = [
+  { to: '/', label: 'Home' },
+  { to: '/services', label: 'Services' },
+  { to: '/about', label: 'About' },
+  { to: '/guidelines', label: 'Guidelines' },
+  { to: '/rules-of-court', label: 'Rules of Court' },
+  { to: '/contact', label: 'Contact' },
+]
+
+export default function Footer() {
   return (
-    <footer style={{borderTop:'1px solid #eee',padding:'2rem 1rem',textAlign:'center',color:'#666'}}>
-      <div style={{maxWidth:980,margin:'0 auto'}}>
-        <p style={{margin:0}}>© {new Date().getFullYear()} Restoring Paths — Supervised Family Visits</p>
-        <p style={{margin:'0.25rem 0 0'}}>Call: <a href="tel:19097440025">(909) 744-0025</a> • <a href="mailto:restoringpathsmonitor@gmail.com">restoringpathsmonitor@gmail.com</a></p>
+    <footer className="site-footer">
+      <div className="site-footer__inner">
+        <nav className="site-footer__nav" aria-label="Footer navigation">
+          {pageLinks.map((link) => (
+            <Link key={link.to} to={link.to} className="site-footer__link">
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+        <p className="site-footer__text">© {new Date().getFullYear()} Restoring Paths</p>
       </div>
     </footer>
   )

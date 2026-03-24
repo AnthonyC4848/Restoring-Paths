@@ -2,6 +2,7 @@ import './App.css'
 import { Link, Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import logo from './assets/restored_paths.png'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
@@ -63,6 +64,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   )
 }

@@ -23,3 +23,5 @@ restoring-paths-godaddy.zip
 *.njsproj
 *.sln
 *.sw?
+
+_gh-pages-publish/
