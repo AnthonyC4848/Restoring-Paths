@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import slide1 from '../assets/slide1.jpg'
 import slide2 from '../assets/slide2.jpg'
-import slide3 from '../assets/slide3.jpg'
 import slide4 from '../assets/slide4.jpg'
 
 export default function Carousel({ images, interval = 4500 }){
@@ -11,7 +10,7 @@ export default function Carousel({ images, interval = 4500 }){
     'https://source.unsplash.com/1600x900/?mother,child&sig=3'
   ]
 
-  const localCandidates = useMemo(() => [slide1, slide2, slide3, slide4], [])
+  const localCandidates = useMemo(() => [slide1, slide2, slide4], [])
 
   const [index, setIndex] = useState(0)
   const [imagesList, setImagesList] = useState(images || localCandidates)
