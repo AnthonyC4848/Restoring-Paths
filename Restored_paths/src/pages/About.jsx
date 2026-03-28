@@ -13,7 +13,7 @@ export default function About(){
           />
         </figure>
         <h1 id="about-title">About Restoring Paths</h1>
-        <p><strong>Caption:</strong> Nancy Zoller; Restoring Paths Court Visitation Monitor</p>
+        <p><strong>Nancy Zoller; Restoring Paths Court Visitation Monitor</strong></p>
         <p>
           With a gentle and reassuring presence, Nancy Zoller serves as a trusted court visitation monitor for families navigating complex situations. Her life experience as a grandmother, foster parent, and adoptive parent has shaped her compassionate perspective and deep respect for the needs of your children and family. Nancy&apos;s extensive experience within the California Family Court System allows her to approach each visit with professionalism and care, while maintaining a calm and supportive atmosphere. She is dedicated to helping your family feel safe, heard, and treated with dignity throughout the visitation process.
         </p>
