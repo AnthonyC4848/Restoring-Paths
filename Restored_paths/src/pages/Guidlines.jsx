@@ -4,7 +4,7 @@ export default function Guidelines() {
   return (
     <section aria-labelledby="guidelines-title">
       <div className="content-panel" style={{ maxWidth: 900, margin: '0 auto', textAlign: 'left' }}>
-        <h1 id="guidelines-title">PARENT GUIDELINES</h1>
+        <h1 id="guidelines-title">Visit Guidelines</h1>
         <p>The following protocol must be accepted and understood by parents.</p>
 
         <h2>1. The following must be followed:</h2>
@@ -102,6 +102,11 @@ export default function Guidelines() {
           >
             https://www.courts.ca.gov/cms/rules/index.cfm?title=standards&linkid=standard5_20
           </a>
+        </p>
+
+        <h2>Schedule Your Intake Appointment Today:</h2>
+        <p>
+          Email <a href="mailto:RestoringPathsMonitor@Gmail.com">RestoringPathsMonitor@Gmail.com</a> or Text <a href="tel:19097440025">(909) 744-0025</a>
         </p>
       </div>
     </section>

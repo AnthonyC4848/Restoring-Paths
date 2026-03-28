@@ -4,7 +4,7 @@ export default function RulesOfCourt() {
   return (
     <section aria-labelledby="rules-title">
       <div className="content-panel" style={{maxWidth:900,margin:'0 auto',textAlign:'left'}}>
-        <h1 id="rules-title">California Rules of Court</h1>
+        <h1 id="rules-title">California Court Rules</h1>
         <p style={{textAlign:'center',fontSize:'0.9rem',marginBottom:'2rem'}}>
           <strong>Judicial Council of California</strong><br/>
           Standard 5.20. Uniform Standards of Practice for Providers of Supervised Visitation<br/>
@@ -186,6 +186,11 @@ export default function RulesOfCourt() {
           <a href="https://www.courts.ca.gov/cms/rules/index.cfm?title=standards&linkid=standard5_20" target="_blank" rel="noopener noreferrer">
             View on California Courts Website
           </a>
+        </p>
+
+        <h2>Schedule Your Intake Appointment Today:</h2>
+        <p>
+          Email <a href="mailto:RestoringPathsMonitor@Gmail.com">RestoringPathsMonitor@Gmail.com</a> or Text <a href="tel:19097440025">(909) 744-0025</a>
         </p>
       </div>
     </section>

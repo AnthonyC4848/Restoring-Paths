@@ -48,8 +48,8 @@ function App() {
             <Link to="/" className="navlink" onClick={()=> setMenuOpen(false)}>Home</Link>
             <Link to="/services" className="navlink" onClick={()=> setMenuOpen(false)}>Services</Link>
             <Link to="/about" className="navlink" onClick={()=> setMenuOpen(false)}>About</Link>
-            <Link to="/guidelines" className="navlink" onClick={()=> setMenuOpen(false)}>Guidelines</Link>
-            <Link to="/rules-of-court" className="navlink" onClick={()=> setMenuOpen(false)}>Rules of Court</Link>
+            <Link to="/guidelines" className="navlink" onClick={()=> setMenuOpen(false)}>Visit Guidelines</Link>
+            <Link to="/rules-of-court" className="navlink" onClick={()=> setMenuOpen(false)}>Court Rules</Link>
             <Link to="/contact" className="navlink" onClick={()=> setMenuOpen(false)}>Contact</Link>
           </nav>
         </div>

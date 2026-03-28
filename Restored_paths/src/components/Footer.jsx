@@ -4,8 +4,8 @@ const pageLinks = [
   { to: '/', label: 'Home' },
   { to: '/services', label: 'Services' },
   { to: '/about', label: 'About' },
-  { to: '/guidelines', label: 'Guidelines' },
-  { to: '/rules-of-court', label: 'Rules of Court' },
+  { to: '/guidelines', label: 'Visit Guidelines' },
+  { to: '/rules-of-court', label: 'Court Rules' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -20,6 +20,9 @@ export default function Footer() {
             </Link>
           ))}
         </nav>
+        <p className="site-footer__verse">
+          Blessed are the peacemakers, for they will be called children of God. - Matthew 5:9
+        </p>
         <p className="site-footer__text">© {new Date().getFullYear()} Restoring Paths</p>
       </div>
     </footer>

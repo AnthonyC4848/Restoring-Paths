@@ -5,10 +5,12 @@ export default function Contact() {
     <section aria-labelledby="contact-title">
       <div className="content-panel" style={{maxWidth:700,margin:'0 auto'}}>
         <h1 id="contact-title">Contact</h1>
-        <p>If you need to schedule a supervised visit or have questions, please email <a href="mailto:restoringpathsmonitor@gmail.com">restoringpathsmonitor@gmail.com</a> or call <a href="tel:19097440025">(909) 744-0025</a>.</p>
-        <h2>Office Hours</h2>
-        <p>Mon–Fri: 9:00am – 5:00pm</p>
-        <p>Please include case number and preferred dates when emailing.</p>
+        <p>
+          To Schedule your intake appointment or ask questions, please email <a href="mailto:RestoringPathsMonitor@gmail.com">RestoringPathsMonitor@gmail.com</a>, or text, call <a href="tel:19097440025">(909) 744-0025</a>.
+        </p>
+        <p>
+          Please include your case number and preferred visitation dates when emailing or texting.
+        </p>
       </div>
     </section>
   )

@@ -14,13 +14,21 @@ export default function Home() {
             <span className="home-heart home-hb4">❤</span>
           </div>
           <div className="content-panel">
-            <h1 id="home-title">Restoring Paths</h1>
-            <p style={{color:'#444',fontSize:'1.05rem'}}>We provide supervised family visits in a safe, neutral environment approved by the courts. Our goal is to make visits calm, structured and focused on the child's wellbeing.</p>
+            <h1 id="home-title">Restoring Paths: Riverside County Child Visitation Monitor</h1>
+            <p style={{color:'#444',fontSize:'1.05rem'}}>
+              Supervised family visits in a safe, neutral environment that supports your child&apos;s wellbeing and are approved by the California Family Court System.
+            </p>
             <h2>What is Supervised Visitation?</h2>
             <p>
-              A supervised Visitation is contact between a non-custodial party and one or more children in the presence of a neutral third person. A Supervised Monitor is there to keep your child safe and everyone involved in the visits and are kept reasonably safe and protected. We will be present at all times during the visit and will be able to hear all conversation of the child and noncustodial parent. We will be paying close attention to the children’s behavior. If necessary, the monitor may interrupt or end a visit if the visit has become unsafe.
+              Supervised visitation provides an opportunity for a non-custodial party to spend time with their child or children in the presence of a neutral, trained third party. The supervised monitor&apos;s role is to help ensure a safe, supportive environment for everyone involved, with a primary focus on the child&apos;s wellbeing. The monitor remains present throughout the visit, observing interactions and maintaining awareness of conversations. If a situation arises that may impact your child&apos;s safety or emotional wellbeing, the monitor may gently redirect, pause, or end the visit as needed.
             </p>
-            <p><a href="mailto:restoringpathsmonitor@gmail.com">Email to request an appointment</a> or call <a href="tel:19097440025">(909) 744-0025</a>.</p>
+            <p>
+              Restoring Paths comes to you; we provide visitation monitoring at the park, mall, in your home and other child-friendly environments in Menifee, Murrieta, Temecula, Wildomar, and French Valley. Special Needs Experience.
+            </p>
+            <h2>Get Started Today:</h2>
+            <p>
+              Email: <a href="mailto:RestoringPathsMonitor@Gmail.com">RestoringPathsMonitor@Gmail.com</a> or Text: <a href="tel:19097440025">(909) 744-0025</a>
+            </p>
           </div>
         </div>
       </section>

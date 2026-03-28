@@ -51,6 +51,10 @@ export default function Carousel({ images, interval = 4500 }){
         />
       ))}
 
+      <div className="carousel-overlay" aria-hidden="true">
+        <p className="carousel-overlay-title">Supervised Family Visits</p>
+      </div>
+
       <div className="carousel-controls" aria-hidden="false">
         <button className="carousel-arrow prev" onClick={prev} aria-label="Previous slide">‹</button>
         <button className="carousel-arrow next" onClick={next} aria-label="Next slide">›</button>
